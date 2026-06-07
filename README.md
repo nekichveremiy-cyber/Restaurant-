@@ -1,263 +1,261 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grill Bar Dacha | Luxury Menu</title>
+<title>Grill Bar Dacha | Меню</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body{
 margin:0;
 font-family:Inter;
-background:#0a0a0a;
+background:#0b0b0b;
 color:white;
 }
 
-/* HEADER */
 header{
-position:fixed;
+padding:25px 40px;
+background:#111;
+position:sticky;
 top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(12px);
-z-index:10;
+border-bottom:1px solid #222;
 }
 
 .logo{
-font-weight:700;
 color:#d4af37;
-letter-spacing:1px;
+font-weight:700;
 }
 
-/* HERO */
-.hero{
-height:70vh;
-background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-}
-
-.hero::after{
-content:'';
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.6);
-}
-
-.hero h1{
-font-family:'Playfair Display';
-font-size:60px;
-position:relative;
-}
-
-/* SECTION */
 .section{
-padding:80px 40px;
-max-width:1200px;
+max-width:1000px;
 margin:auto;
+padding:40px;
 }
 
 h2{
-font-family:'Playfair Display';
 color:#d4af37;
-font-size:32px;
-margin-bottom:20px;
+margin-top:60px;
+border-bottom:1px solid #222;
+padding-bottom:10px;
 }
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+.item{
+padding:15px 0;
+border-bottom:1px solid #1f1f1f;
 }
 
-/* CARD */
-.card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-border-radius:16px;
-overflow:hidden;
-transition:0.3s;
+.title{
+font-weight:600;
 }
 
-.card:hover{
-transform:translateY(-6px);
-}
-
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-
-.content{
-padding:15px;
+.desc{
+opacity:0.7;
+font-size:14px;
+margin-top:5px;
 }
 
 .price{
 color:#d4af37;
-font-weight:600;
 margin-top:5px;
+font-weight:600;
 }
 
-/* CATEGORY TITLE */
 .cat{
-margin-top:60px;
+margin-top:40px;
+font-size:26px;
+font-weight:700;
+color:#fff;
 }
 
-footer{
-text-align:center;
-padding:40px;
-opacity:0.5;
-border-top:1px solid #222;
-}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">Grill Bar Dacha</div>
+<div class="logo">Grill Bar Dacha — Меню</div>
 </header>
-
-<div class="hero">
-<h1>Luxury Restaurant Experience</h1>
-</div>
-
-<!-- START MENU -->
 
 <div class="section">
 
-<h2>🥗 Холодні закуски</h2>
-<div class="grid">
+<!-- ХОЛОДНІ ЗАКУСКИ -->
+<div class="cat">Холодні закуски</div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1604908177522-0407c2f5a7d6">
-<div class="content">
-Рибний сет
-<div class="price">620 грн</div>
-</div>
+<div class="item">
+<div class="title">Рибний сет (150/110г)</div>
+<div class="desc">Масляна, червона риба, зелене масло, сирний мус, червона ікра, імбир, лайм.</div>
+<div class="price">620.00</div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086">
-<div class="content">
-Овочеве плато
-<div class="price">130 грн</div>
-</div>
+<div class="item">
+<div class="title">Закуска з маринованих печериць та огірків (100/100г)</div>
+<div class="desc">Заправлені часником, кропом, оцтом та запашною олією. Подається з маринованою цибулею.</div>
+<div class="price">120.00</div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1603079843962-8f6a8c7a1d12">
-<div class="content">
-Тарілка до вина
-<div class="price">320 грн</div>
+<div class="item">
+<div class="title">Збиранка з сала з хріном та гірчицею (150/130/70г)</div>
+<div class="desc">Сало з зеленню, червоним перцем. Подається з часником, огірком та чилі.</div>
+<div class="price">210.00</div>
 </div>
+
+<div class="item">
+<div class="title">Овочеве плато (300/50/30г)</div>
+<div class="desc">Огірки, помідори, перець, цибуля, редис. Соус тартар.</div>
+<div class="price">130.00</div>
+</div>
+
+<div class="item">
+<div class="title">Тарілка до вина (280г)</div>
+<div class="desc">Сири, прошуто, оливки, грісіні, мед, маринована слива.</div>
+<div class="price">320.00</div>
+</div>
+
+<div class="item">
+<div class="title">Оселедець з картоплею (100/245г)</div>
+<div class="desc">Смажена картопля, цибуля, огірки, опеньки, тартар.</div>
+<div class="price">210.00</div>
+</div>
+
+<div class="item">
+<div class="title">Тарілка елітних сирів (300/100г)</div>
+<div class="desc">Сири з медом, горіхами та журавлиною.</div>
+<div class="price">340.00</div>
+</div>
+
+<div class="item">
+<div class="title">Запечені перці (230г)</div>
+<div class="desc">Сирна начинка, горіхи, зелень, гранат.</div>
+<div class="price">180.00</div>
+</div>
+
+<div class="item">
+<div class="title">Відварний язик з соусом із тунця (50/190г)</div>
+<div class="desc">Пармезан, зелень, чері, каперси, грінки.</div>
+<div class="price">210.00</div>
+</div>
+
+<div class="item">
+<div class="title">Домашні соління (360г)</div>
+<div class="desc">Капуста, огірки, опеньки, помідори.</div>
+<div class="price">130.00</div>
+</div>
+
+<div class="item">
+<div class="title">Тарталетки з крем-сиром та червоною рибою (240г)</div>
+<div class="desc">Пісочне тісто, крем-сир, червона риба.</div>
+<div class="price">250.00</div>
+</div>
+
+<div class="item">
+<div class="title">Тарталетки з міксом начинок (360г)</div>
+<div class="desc">Паштет, форшмак, баклажани, сало.</div>
+<div class="price">240.00</div>
+</div>
+
+<div class="item">
+<div class="title">Млинці з крем-сиром та рибою (140г)</div>
+<div class="desc">Шпинатний млинець, крем-сир, червона риба.</div>
+<div class="price">170.00</div>
+</div>
+
+<!-- САЛАТИ -->
+<div class="cat">Салати</div>
+
+<div class="item">
+<div class="title">Цезар з куркою (260г)</div>
+<div class="desc">Айсберг, курка, крутони, соус Цезар, пармезан.</div>
+<div class="price">210.00</div>
+</div>
+
+<div class="item">
+<div class="title">Салат зі свіжої капусти (250г)</div>
+<div class="desc">Капуста, морква, перець, цибуля, олія.</div>
+<div class="price">120.00</div>
+</div>
+
+<div class="item">
+<div class="title">Грецький салат (260г)</div>
+<div class="desc">Овочі, фета, маслини, олія, бальзамік.</div>
+<div class="price">150.00</div>
+</div>
+
+<div class="item">
+<div class="title">Салат з червоною рибою (230г)</div>
+<div class="desc">Огірок, авокадо, помідор, цитрусовий соус.</div>
+<div class="price">230.00</div>
+</div>
+
+<div class="item">
+<div class="title">Овочевий салат з оселедцем (270г)</div>
+<div class="desc">Овочі, картопля, цибуля, олія, дресінг.</div>
+<div class="price">140.00</div>
+</div>
+
+<div class="item">
+<div class="title">Салат з яловичиною су-від (260г)</div>
+<div class="desc">Гірчичний соус, овочі, яловичина.</div>
+<div class="price">240.00</div>
+</div>
+
+<div class="item">
+<div class="title">Салат з куркою в панко (280г)</div>
+<div class="desc">Курка, печериці, пармезан, маринована цибуля.</div>
+<div class="price">180.00</div>
+</div>
+
+<div class="item">
+<div class="title">Салат з прошуто та грушею (180г)</div>
+<div class="desc">Прошуто, груша, крем-сир, мікс салату.</div>
+<div class="price">220.00</div>
+</div>
+
+<div class="item">
+<div class="title">Салат з курки та ананасу (230г)</div>
+<div class="desc">Кукурудза, сир, перець, яблуко, гірчичний соус.</div>
+<div class="price">170.00</div>
+</div>
+
+<div class="item">
+<div class="title">Салат “Дача” (270г)</div>
+<div class="desc">Овочі, плавлений сир, часниковий соус.</div>
+<div class="price">160.00</div>
+</div>
+
+<!-- ПЕРШІ СТРАВИ -->
+<div class="cat">Перші страви</div>
+
+<div class="item">
+<div class="title">Борщ червоний</div>
+<div class="desc">Квасоля, свинина, овочі, сметана, часник.</div>
+<div class="price">140.00</div>
+</div>
+
+<div class="item">
+<div class="title">Селянка</div>
+<div class="desc">Ковбаски, м’ясо, огірки, маслини.</div>
+<div class="price">180.00</div>
+</div>
+
+<div class="item">
+<div class="title">Сирний крем-суп</div>
+<div class="desc">Пармезан, грінки, трюфельна олія.</div>
+<div class="price">110.00</div>
+</div>
+
+<div class="item">
+<div class="title">Суп гороховий</div>
+<div class="desc">Копченості, грінки.</div>
+<div class="price">110.00</div>
 </div>
 
 </div>
 
-<!-- SALADS -->
-<h2 class="cat">🥗 Салати</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
-<div class="content">
-Цезар з куркою
-<div class="price">210 грн</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187">
-<div class="content">
-Грецький салат
-<div class="price">150 грн</div>
-</div>
-</div>
-
-</div>
-
-<!-- SOUPS -->
-<h2 class="cat">🍲 Перші страви</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1604908176997-125f25cc500f">
-<div class="content">
-Борщ червоний
-<div class="price">140 грн</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1547592180-85f173990554">
-<div class="content">
-Сирний крем-суп
-<div class="price">180 грн</div>
-</div>
-</div>
-
-</div>
-
-<!-- MAIN -->
-<h2 class="cat">🔥 Основні страви</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
-<div class="content">
-Котлета по-київськи
-<div class="price">240 грн</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1">
-<div class="content">
-Лосось з броколі
-<div class="price">490 грн</div>
-</div>
-</div>
-
-</div>
-
-<!-- PIZZA -->
-<h2 class="cat">🍕 Піца</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1548365328-9f547f6f9a6f">
-<div class="content">
-Піца М’ясна
-<div class="price">250 грн</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591">
-<div class="content">
-Піца Папероні
-<div class="price">220 грн</div>
-</div>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-© 2026 Grill Bar Dacha — Luxury Restaurant Experience
+<footer style="text-align:center;padding:40px;opacity:0.5;">
+© Grill Bar Dacha — Menu
 </footer>
 
 </body>
