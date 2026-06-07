@@ -3,141 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grill Bar Dacha | Premium Delivery</title>
+<title>Grill Bar Dacha | Luxury Restaurant</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body{
 margin:0;
 font-family:Inter;
-background: radial-gradient(circle at top, #1b1b1b, #0a0a0a);
+background:#0b0b0b;
 color:white;
 overflow-x:hidden;
 }
 
-/* TOP */
-header{
-padding:20px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-weight:800;
-letter-spacing:1px;
-color:#ff3b3b;
-}
-
-.btn-top{
-background:rgba(255,255,255,0.08);
-padding:10px 15px;
-border-radius:12px;
-backdrop-filter:blur(10px);
-cursor:pointer;
-}
-
 /* HERO */
 .hero{
+height:90vh;
+background:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+position:relative;
 text-align:center;
-padding:80px 20px;
+z-index:2;
 }
 
 .hero h1{
-font-size:50px;
+font-family:'Playfair Display';
+font-size:64px;
 margin:0;
 }
 
 .hero p{
-opacity:0.7;
+opacity:0.8;
+font-size:18px;
 }
 
-/* LAYOUT */
-.container{
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
 display:flex;
-gap:20px;
+justify-content:space-between;
 padding:20px 40px;
+backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.4);
+z-index:10;
 }
 
-/* MENU */
+.logo{
+font-weight:700;
+letter-spacing:1px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+opacity:0.8;
+}
+
+/* SECTION */
+.section{
+padding:80px 40px;
+max-width:1200px;
+margin:auto;
+}
+
+.section h2{
+font-family:'Playfair Display';
+font-size:36px;
+margin-bottom:20px;
+}
+
+/* MENU GRID */
 .menu{
-flex:3;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
 .card{
-background:rgba(255,255,255,0.06);
+background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
-backdrop-filter:blur(12px);
-border-radius:18px;
-padding:15px;
+border-radius:20px;
+overflow:hidden;
 transition:0.3s;
-transform:translateY(20px);
-opacity:0;
-animation:fadeUp 0.6s forwards;
 }
 
 .card:hover{
-transform:scale(1.03);
+transform:translateY(-5px);
 }
 
-@keyframes fadeUp{
-to{opacity:1;transform:translateY(0);}
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
 }
 
 .price{
-color:#ff3b3b;
+color:#d4af37;
 font-weight:600;
-margin:10px 0;
 }
 
-button{
-width:100%;
-padding:10px;
-border:none;
-border-radius:12px;
-background:linear-gradient(135deg,#ff3b3b,#ff7a18);
-color:white;
-cursor:pointer;
-}
-
-/* CART */
-.cart{
-flex:1;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-border-radius:18px;
-padding:20px;
-position:sticky;
-top:20px;
-height:fit-content;
-}
-
-.item{
+/* ABOUT */
+.about{
 display:flex;
-justify-content:space-between;
-margin:10px 0;
-font-size:14px;
-opacity:0.9;
+gap:40px;
+align-items:center;
+flex-wrap:wrap;
 }
 
-.total{
-margin-top:20px;
-font-size:18px;
-font-weight:600;
-}
-
-.checkout{
-margin-top:15px;
+.about img{
 width:100%;
-padding:12px;
-background:linear-gradient(135deg,#00c853,#00e676);
-border:none;
-border-radius:12px;
-cursor:pointer;
+max-width:500px;
+border-radius:20px;
 }
 
 /* FOOTER */
@@ -145,117 +141,101 @@ footer{
 text-align:center;
 padding:40px;
 opacity:0.5;
+border-top:1px solid #222;
 }
 
-/* MOBILE */
-@media(max-width:900px){
-.container{flex-direction:column;}
-.hero h1{font-size:32px;}
+@media(max-width:768px){
+.hero h1{font-size:38px;}
+nav{padding:15px;}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">🔥 Grill Bar Dacha</div>
-<div class="btn-top">Premium Delivery</div>
-</header>
+<nav>
+<div class="logo">Grill Bar Dacha</div>
+<div class="nav-links">
+<a href="#menu">Меню</a>
+<a href="#about">Про нас</a>
+<a href="#contact">Контакти</a>
+</div>
+</nav>
 
 <div class="hero">
-<h1>Ресторанна доставка нового рівня</h1>
-<p>Смак. Атмосфера. Швидкість. Як у топових сервісах доставки.</p>
+<div class="hero-content">
+<h1>Luxury Grill Experience</h1>
+<p>Смак, який виглядає як мистецтво</p>
+</div>
 </div>
 
-<div class="container">
-
 <!-- MENU -->
+<div class="section" id="menu">
+<h2>Меню</h2>
+
 <div class="menu">
 
 <div class="card">
-<h3>Піца Трюфель</h3>
-<div class="price">189 грн</div>
-<button onclick="add('Піца Трюфель',189)">Додати в кошик</button>
+<img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9">
+<div class="card-content">
+<h3>Піца Маргарита</h3>
+<p class="price">120 грн</p>
+</div>
 </div>
 
 <div class="card">
-<h3>Піца BBQ Meat</h3>
-<div class="price">179 грн</div>
-<button onclick="add('BBQ Meat',179)">Додати в кошик</button>
+<img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086">
+<div class="card-content">
+<h3>Піца М’ясна</h3>
+<p class="price">160 грн</p>
+</div>
 </div>
 
 <div class="card">
-<h3>Шашлик Преміум</h3>
-<div class="price">220 грн</div>
-<button onclick="add('Шашлик Преміум',220)">Додати в кошик</button>
+<img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba">
+<div class="card-content">
+<h3>Шашлик на вогні</h3>
+<p class="price">180 грн</p>
+</div>
 </div>
 
 <div class="card">
-<h3>Бургер Dacha Gold</h3>
-<div class="price">165 грн</div>
-<button onclick="add('Бургер Gold',165)">Додати в кошик</button>
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+<div class="card-content">
+<h3>Преміум бургер</h3>
+<p class="price">150 грн</p>
 </div>
-
-<div class="card">
-<h3>Картопля з пармезаном</h3>
-<div class="price">95 грн</div>
-<button onclick="add('Фрі Пармезан',95)">Додати в кошик</button>
 </div>
 
 </div>
-
-<!-- CART -->
-<div class="cart">
-<h3>🛒 Ваш кошик</h3>
-<div id="cart"></div>
-
-<div class="total">
-Разом: <span id="total">0</span> грн
 </div>
 
-<button class="checkout" onclick="order()">
-Оформити замовлення
-</button>
+<!-- ABOUT -->
+<div class="section" id="about">
+<h2>Про нас</h2>
+
+<div class="about">
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
+<div>
+<p>
+Grill Bar Dacha — це ресторан преміум рівня з атмосферою тепла, вогню та справжнього смаку.
+Ми створюємо не просто їжу — ми створюємо досвід.
+</p>
+</div>
+</div>
 </div>
 
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Контакти</h2>
+<p>📍 Славута, вул. Лісна 30В</p>
+<p>📞 068 410 13 17</p>
+<p>📸 Instagram: @grill_bar_dacha_</p>
 </div>
 
 <footer>
-© 2026 Grill Bar Dacha — Premium Restaurant Delivery
+© 2026 Grill Bar Dacha — Luxury Restaurant Experience
 </footer>
-
-<script>
-let cart = [];
-
-function add(name, price){
-cart.push({name, price});
-render();
-}
-
-function render(){
-let box = document.getElementById("cart");
-let total = 0;
-box.innerHTML = "";
-
-cart.forEach(i=>{
-total += i.price;
-box.innerHTML += `<div class="item"><span>${i.name}</span><span>${i.price} грн</span></div>`;
-});
-
-document.getElementById("total").innerText = total;
-}
-
-function order(){
-if(cart.length === 0){
-alert("Кошик порожній");
-return;
-}
-
-alert("🔥 Замовлення прийнято! Ми скоро зв’яжемось з вами.");
-cart = [];
-render();
-}
-</script>
 
 </body>
 </html>
